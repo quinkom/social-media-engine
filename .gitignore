@@ -1,24 +1,35 @@
-# Environment
+# OS files
+.DS_Store
+Thumbs.db
+
+#invironment
 .env
 venv/
-__pycache__/
-.pyc
-*.pyc
-*.pkl
 
-# Generated content (too large for repo)
-content/*.png
-content/*.jpg
-content/*.mp4
-content/*.mov
+# Brand config (private — contains your brand details and is machine-specific)
+# Commit brand_config.example.json instead
+brand_config.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# ML models (trained locally, not committed)
+*.pkl
+*.joblib
+
+# Generated content (local only)
+content/
 clips/
 
-# Data and logs (user-specific)
-data/content_records.json
-data/daily_snapshots.jsonl
-data/*.pkl
+# Data & logs (user-specific)
+data/
 logs/
 
-# OS
-.DS_tore
-Thumbs.db
+# IDE
+.vscode/
+.idea/
