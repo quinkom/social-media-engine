@@ -1,0 +1,10 @@
+# Quinton Kom Content Engine — Dependencies
+anthropic>=0.18.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+Pillow>=10.0.0          # Image generation for carousels
+scikit-learn>=1.3.0     # ML model training
+pandas>=2.0.0           # Data analysis
+schedule>=1.2.0         # Task scheduling
+openai>=1.0.0           # DALL-E image generation
+flask>=3.0.0            # Web dashboard
