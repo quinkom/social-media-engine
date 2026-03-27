@@ -1,0 +1,24 @@
+# Environment
+.env
+venv/
+__pycache__/
+.pyc
+*.pyc
+*.pkl
+
+# Generated content (too large for repo)
+content/*.png
+content/*.jpg
+content/*.mp4
+content/*.mov
+clips/
+
+# Data and logs (user-specific)
+data/content_records.json
+data/daily_snapshots.jsonl
+data/*.pkl
+logs/
+
+# OS
+.DS_tore
+Thumbs.db
