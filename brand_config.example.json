@@ -1,0 +1,155 @@
+{
+  "_instructions": "Copy this file to brand_config.json and fill in your details. brand_config.json is gitignored — it stays on your machine.",
+
+  "brand": {
+    "name": "Your Brand Name",
+    "handle": "@yourbrandhandle",
+    "tagline": "Your one-line brand promise.",
+    "description": "What your brand is about in 1-2 sentences. This is used in AI prompts to keep content on-brand.",
+    "niche": "Describe your niche in a few words, e.g. 'health and fitness', 'personal finance', 'travel photography', 'software engineering'",
+    "pillars": [
+      "pillar_one",
+      "pillar_two",
+      "pillar_three"
+    ],
+    "voice": {
+      "tone": "e.g. Direct, knowledgeable, slightly irreverent. Not preachy.",
+      "personality": "e.g. The friend who gives real advice without the fluff.",
+      "avoid": [
+        "List things your brand never says or does",
+        "Unverified or exaggerated claims",
+        "Generic motivational fluff"
+      ],
+      "embrace": [
+        "Specific, actionable information people can use today",
+        "Humor and personality over polish",
+        "Honest takes and nuance"
+      ],
+      "influences": [
+        "Creator or brand you admire",
+        "Another influence",
+        "One more"
+      ]
+    },
+    "color_palette": {
+      "_comment": "Used by the content engine for carousel and image generation. Hex codes.",
+      "primary": "#1A1A2E",
+      "secondary": "#16213E",
+      "accent": "#E94560",
+      "background": "#F5F5F5",
+      "text_light": "#FFFFFF",
+      "text_dark": "#1A1A2E"
+    }
+  },
+
+  "platforms": {
+    "_comment": "Set enabled: false for platforms you don't use. Handles are your username without the @.",
+    "instagram": {
+      "enabled": true,
+      "handle": "yourusername",
+      "daily_target": 2,
+      "optimal_times": ["07:00", "12:00", "18:00"]
+    },
+    "tiktok": {
+      "enabled": true,
+      "handle": "yourusername",
+      "daily_target": 2,
+      "optimal_times": ["09:00", "14:00", "19:00"]
+    },
+    "youtube_shorts": {
+      "enabled": false,
+      "handle": "yourusername",
+      "daily_target": 1,
+      "optimal_times": ["11:00", "17:00"]
+    },
+    "twitter": {
+      "enabled": false,
+      "handle": "yourusername",
+      "daily_target": 2,
+      "optimal_times": ["08:00", "12:30", "17:30"]
+    },
+    "pinterest": {
+      "enabled": false,
+      "handle": "yourusername",
+      "daily_target": 3,
+      "optimal_times": ["20:00", "21:00"]
+    }
+  },
+
+  "content_types": {
+    "_comment": "Define the content formats that make sense for your niche. engagement_multiplier is relative — 1.0 is baseline. You can add or remove types.",
+    "reaction": {
+      "description": "React to something trending in your niche — a product, news story, or viral claim",
+      "format": "short_video",
+      "requires_face": true,
+      "engagement_multiplier": 1.5,
+      "example": "Hold up a product, flip it over, react to what you find"
+    },
+    "comparison": {
+      "description": "Compare two things — good vs bad, before vs after, cheap vs expensive",
+      "format": "carousel",
+      "requires_face": false,
+      "engagement_multiplier": 1.3,
+      "example": "Slide 1: Option A. Slide 2: Why it fails. Slide 3: Better alternative"
+    },
+    "showcase": {
+      "description": "Show something you made, do, or use in your niche",
+      "format": "single_image_or_reel",
+      "requires_face": true,
+      "engagement_multiplier": 1.0,
+      "example": "Quick visual of your work, process, or result"
+    },
+    "myth_bust": {
+      "description": "Correct a common misconception or piece of bad advice in your niche",
+      "format": "carousel",
+      "requires_face": false,
+      "engagement_multiplier": 1.4,
+      "example": "Start with the myth, explain why it's wrong, give the real answer"
+    },
+    "tutorial": {
+      "description": "Quick how-to, tip, or skill demo in your niche",
+      "format": "short_video",
+      "requires_face": true,
+      "engagement_multiplier": 1.2,
+      "example": "15-30 second demo of one specific technique or trick"
+    },
+    "deep_dive": {
+      "description": "Educational carousel or thread on a topic your audience wants to understand",
+      "format": "carousel_or_thread",
+      "requires_face": false,
+      "engagement_multiplier": 1.1,
+      "example": "5-8 slide breakdown of a complex concept in your niche"
+    },
+    "hot_take": {
+      "description": "Strong, specific opinion on a trending topic in your niche",
+      "format": "text_or_short_video",
+      "requires_face": true,
+      "engagement_multiplier": 1.6,
+      "example": "Disagree with conventional wisdom and explain exactly why"
+    },
+    "recommendation": {
+      "description": "Genuine recommendation of a product, tool, or resource you actually use",
+      "format": "short_video_or_carousel",
+      "requires_face": true,
+      "engagement_multiplier": 0.9,
+      "monetization": "affiliate",
+      "example": "The three things I use every week and why I chose them"
+    }
+  },
+
+  "ml": {
+    "_comment": "Controls the ML engagement prediction model. Adjust engagement_weights to prioritize what matters most to your business.",
+    "min_training_samples": 50,
+    "retrain_interval_days": 7,
+    "engagement_weights": {
+      "views": 0.1,
+      "likes": 0.3,
+      "comments": 0.5,
+      "shares": 1.5,
+      "saves": 1.0,
+      "clicks": 2.0,
+      "affiliate_revenue": 5.0,
+      "follows_gained": 3.0
+    }
+  }
+}
